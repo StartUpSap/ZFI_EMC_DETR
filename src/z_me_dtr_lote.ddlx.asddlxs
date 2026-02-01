@@ -1,0 +1,82 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+    headerInfo: {
+    typeName: 'Configuración de Lote',
+    typeNamePlural: 'Configuración de Lotes',
+    title: {
+        type: #STANDARD,
+        label: 'Correlativo',
+        value: 'corre'
+          }
+  }
+
+ }
+annotate entity ZC_C_DTR_LOTE
+    with 
+{
+
+  @EndUserText.label: 'Correlativo'
+     @UI.facet: [{
+        purpose: #STANDARD,
+        label: 'Correlativo',
+        type: #IDENTIFICATION_REFERENCE,
+        position: 10
+    }]
+     @UI:{
+      lineItem: [{ position: 10 }  ],
+      identification: [{ position: 10 }]
+  }
+  @Search.defaultSearchElement: true
+  Corre;
+
+  @EndUserText.label: 'Sociedad'
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20 ,cssDefault:{ width: '80px' }
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  CompanyCode;
+
+  @EndUserText.label: 'Año'
+  @UI.identification: [ {
+    position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30 ,cssDefault:{ width: '80px' }
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  Gjahr;
+  
+      @EndUserText.label: 'Lote DET.'
+  @UI.identification: [ {
+    position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40, cssDefault:{ width: '80px' }
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  Zltdt;
+    
+  
+    @EndUserText.label: 'Estado de Lote'
+  @UI.identification: [ {
+    position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50, cssDefault:{ width: '80px' }
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  Sttlt;
+    
+}

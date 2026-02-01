@@ -1,0 +1,35 @@
+@Metadata.layer: #CORE
+@Search.searchable: true 
+@UI: { headerInfo: {
+    typeName: 'Pago de detraciones',
+    typeNamePlural: 'Pago de detraciones',
+    title: {
+        type: #STANDARD,
+        value: 'AccountingDocument'
+    }
+} }
+
+
+annotate entity ZC_C_PAGDET
+    with 
+{
+    @UI.facet: [{ id: 'CompanyCode', label: 'Sociedad', purpose: #STANDARD, position: 10 }]
+    @Search.defaultSearchElement: true
+      CompanyCode;    
+     @UI.facet: [{ id: 'GLAccount', label: 'Cta. Detracción', purpose: #STANDARD, position: 20 }]
+    @Search.defaultSearchElement: true 
+      GLAccount;
+    @UI.facet: [{ id: 'DocumentDate', label: 'Fecha de Corte', purpose: #STANDARD, position: 30 }]
+    @Search.defaultSearchElement: true  
+     DocumentDate;
+     @UI.facet: [{ id: 'FiscalYear', label: 'Ejercicio', purpose: #STANDARD, position: 40 }]
+    @Search.defaultSearchElement: true  
+      FiscalYear;   
+     @UI.facet: [{ id: 'AccountingDocumentType', label: 'Clase de Docu.', purpose: #STANDARD, position: 50 }]
+    @Search.defaultSearchElement: true 
+      AccountingDocumentType;
+      @UI.facet: [{ id: 'AccountingDocumentType', label: 'Num Doc.', purpose: #STANDARD, position: 60 }]
+    @Search.defaultSearchElement: true
+      AccountingDocument;
+     
+}

@@ -1,0 +1,207 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+    headerInfo: {
+    typeName: 'Documento de Detracción',
+    typeNamePlural: 'Documentos de Detracción',
+    title: {
+        type: #STANDARD,
+        label: 'NumLote',
+        value: 'NumLote'
+          }
+  }
+ }
+annotate entity ZC_C_DTR_DOCPA
+    with 
+{
+  @EndUserText.label: 'Sociedad'
+  @UI: { lineItem: [{ position: 10 ,cssDefault:{ width: '80px' }}], identification: [{ position: 10 }], selectionField: [{ position: 10 }] }
+  @Search.defaultSearchElement: true
+  CompanyCode;
+
+  @EndUserText.label: 'Ejercicio'
+  @UI: { lineItem: [{ position: 20 ,cssDefault:{ width: '80px' }}], identification: [{ position: 20 }], selectionField: [{ position: 20 }] }
+  @Search.defaultSearchElement: true
+  FiscalYear;
+
+  @EndUserText.label: 'Documento Contable'
+  @UI: { lineItem: [{ position: 30 ,cssDefault:{ width: '120px' }}], identification: [{ position: 30 }], selectionField: [{ position: 30 }] }
+  @Search.defaultSearchElement: true
+  AccountingDocument;
+
+  @EndUserText.label: 'Ledger Source'
+  @UI: { lineItem: [{ position: 40 }], identification: [{ position: 40 }], selectionField: [{ position: 40 }] }
+  @Search.defaultSearchElement: true
+  SourceLedger;
+
+  @EndUserText.label: 'Ledger'
+  @UI: { lineItem: [{ position: 50 }], identification: [{ position: 50 }], selectionField: [{ position: 50 }] }
+  @Search.defaultSearchElement: true
+  Ledger;
+
+  @EndUserText.label: 'N° Línea'
+  @UI: { lineItem: [{ position: 60 }], identification: [{ position: 60 }], selectionField: [{ position: 60 }] }
+  @Search.defaultSearchElement: true
+  LedgerGLLineItem;
+
+  @EndUserText.label: 'Número de Lote'
+  @UI: { lineItem: [{ position: 70 }], identification: [{ position: 70 }], selectionField: [{ position: 70 }] }
+  @Search.defaultSearchElement: true
+  NumLote;
+
+  @EndUserText.label: 'Tipo Documento'
+  @UI.lineItem: [ { position: 80 } ]
+  @UI.identification: [ { position: 80 } ]
+  AccountingDocumentType;
+
+  @EndUserText.label: 'Fecha Documento'
+  @UI.lineItem: [ { position: 90 } ]
+  @UI.identification: [ { position: 90 } ]
+  DocumentDate;
+
+  @EndUserText.label: 'Fecha Contabilización'
+  @UI.lineItem: [ { position: 100 } ]
+  @UI.identification: [ { position: 100 } ]
+  PostingDate;
+
+  @EndUserText.label: 'Referencia'
+  @UI.lineItem: [ { position: 110 } ]
+  @UI.identification: [ { position: 110 } ]
+  DocumentReferenceID;
+
+  @EndUserText.label: 'Proveedor'
+  @UI.lineItem: [ { position: 120 } ]
+  @UI.identification: [ { position: 120 } ]
+  @UI.selectionField: [ { position: 120 } ]
+  Supplier;
+
+  @EndUserText.label: 'Nombre Proveedor'
+  @UI.lineItem: [ { position: 130 } ]
+  @UI.identification: [ { position: 130 } ]
+  BPSupplierName;
+
+  @EndUserText.label: 'RUC Proveedor'
+  @UI.lineItem: [ { position: 140 } ]
+  @UI.identification: [ { position: 140 } ]
+  TaxNumber1;
+
+  @EndUserText.label: 'Cuenta Contable'
+  @UI.lineItem: [ { position: 150 } ]
+  @UI.identification: [ { position: 150 } ]
+  @UI.selectionField: [ { position: 150 } ]
+  GLAccount;
+
+  @EndUserText.label: 'Tipo Cuenta'
+  @UI.lineItem: [ { position: 160 } ]
+  @UI.identification: [ { position: 160 } ]
+  GLAccountType;
+
+  @EndUserText.label: 'Proveedor C'
+  @UI.lineItem: [ { position: 170 } ]
+  @UI.identification: [ { position: 170 } ]
+  SupplierC;
+
+  @EndUserText.label: 'Nombre Prov. C'
+  @UI.lineItem: [ { position: 180 } ]
+  @UI.identification: [ { position: 180 } ]
+  BPSupplierNameC;
+
+  @EndUserText.label: 'RUC Prov. C'
+  @UI.lineItem: [ { position: 190 } ]
+  @UI.identification: [ { position: 190 } ]
+  TaxNumber1C;
+
+  @EndUserText.label: 'Moneda Transacción'
+  @UI.lineItem: [ { position: 200 } ]
+  @UI.identification: [ { position: 200 } ]
+  BalanceTransactionCurrency;
+
+  @EndUserText.label: 'Importe en Moneda Transacción'
+  @UI.lineItem: [ { position: 210 } ]
+  @UI.identification: [ { position: 210 } ]
+  AmountInBalanceTransacCrcy;
+
+  @EndUserText.label: 'Tipo de Cambio'
+  @UI.lineItem: [ { position: 220 } ]
+  @UI.identification: [ { position: 220 } ]
+  AbsoluteExchangeRate;
+  
+  @EndUserText.label: 'Clave Banco'
+  @UI.lineItem: [ { position: 230 } ]
+  @UI.identification: [ { position: 230 } ]
+  Bank;
+
+  @EndUserText.label: 'Cuenta Bancaria'
+  @UI.lineItem: [ { position: 240 } ]
+  @UI.identification: [ { position: 240 } ]
+  BankAccount;
+
+  @EndUserText.label: 'Ejercicio Clearing'
+  @UI.lineItem: [ { position: 250 } ]
+  @UI.identification: [ { position: 250 } ]
+  ClearingJournalEntryFiscalYear;
+
+  @EndUserText.label: 'Documento Clearing'
+  @UI.lineItem: [ { position: 260 } ]
+  @UI.identification: [ { position: 260 } ]
+  ClearingJournalEntry;
+
+  @EndUserText.label: 'Fecha Clearing'
+  @UI.lineItem: [ { position: 270 } ]
+  @UI.identification: [ { position: 270 } ]
+  ClearingDate;
+
+  @EndUserText.label: 'Moneda Sociedad'
+  @UI.lineItem: [ { position: 280 } ]
+  @UI.identification: [ { position: 280 } ]
+  CompanyCodeCurrency;
+
+  @EndUserText.label: 'Moneda Documento'
+  @UI.lineItem: [ { position: 290 } ]
+  @UI.identification: [ { position: 290 } ]
+  DocumentCurrency;
+
+  @EndUserText.label: 'Base Detracción ML'
+  @UI.lineItem: [ { position: 300 } ]
+  @UI.identification: [ { position: 300 } ]
+  WhldgTaxBaseAmtInCoCodeCrcy;
+
+  @EndUserText.label: 'Base Detracción MD'
+  @UI.lineItem: [ { position: 310 } ]
+  @UI.identification: [ { position: 310 } ]
+  WhldgTaxBaseAmtInTransacCrcy;
+
+  @EndUserText.label: 'Importe Detracción ML'
+  @UI.lineItem: [ { position: 320 } ]
+  @UI.identification: [ { position: 320 } ]
+  WhldgTaxAmtInCoCodeCrcy;
+
+  @EndUserText.label: 'Importe Detracción MD'
+  @UI.lineItem: [ { position: 330 } ]
+  @UI.identification: [ { position: 330 } ]
+  WhldgTaxAmtInTransacCrcy;
+
+  @EndUserText.label: 'Código Detracción'
+  @UI.lineItem: [ { position: 340 } ]
+  @UI.identification: [ { position: 340 } ]
+  WithholdingTaxCode;
+
+  @EndUserText.label: 'Tipo Detracción'
+  @UI.lineItem: [ { position: 350 } ]
+  @UI.identification: [ { position: 350 } ]
+  WithholdingTaxType;
+
+  @EndUserText.label: 'Texto Detracción'
+  @UI.lineItem: [ { position: 360 } ]
+  @UI.identification: [ { position: 360 } ]
+  WhldgTaxCodeName;
+  
+  @EndUserText.label: 'EstadoCod'
+  @UI.lineItem: [ { position: 370 } ]
+  @UI.identification: [ { position: 370 } ]
+  @Search.defaultSearchElement: true
+  @UI.selectionField: [ {
+    position: 160
+  } ]
+  EstadoCod;
+}

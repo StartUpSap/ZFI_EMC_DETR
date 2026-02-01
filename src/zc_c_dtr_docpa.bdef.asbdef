@@ -1,0 +1,9 @@
+projection;
+strict;
+
+define behavior for ZC_C_DTR_DOCPA //alias <alias_name>
+{
+  use create;
+  use update;
+  use delete;
+}

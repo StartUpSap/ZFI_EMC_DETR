@@ -1,0 +1,14 @@
+managed implementation in class zbp_c_i_dtr_docpaf unique;
+strict;
+
+define behavior for ZC_I_DTR_DOCPA //alias <alias_name>
+persistent table ZFI_DTR_DOCPA
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  //field ( readonly : update ) CompanyCode, FiscalYear, AccountingDocument, SourceLedger, Ledger, LedgerGLLineItem, NumLote;
+}

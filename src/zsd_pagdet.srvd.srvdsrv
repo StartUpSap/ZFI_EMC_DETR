@@ -1,0 +1,6 @@
+@EndUserText.label: 'Pago de detracciones - ser def'
+define service ZSD_PAGDET {
+  expose ZC_C_PAGDET;
+  expose ZC_C_DTR_LOTE;
+  expose ZC_C_DTR_DOCPA as DTRDOCPA;
+}
